@@ -1,6 +1,7 @@
 // main.js
 const fs = require('fs');
 const path = require('path');
+const core = require('@actions/core');
 
 const contractsDir = './contracts';
 
@@ -53,6 +54,6 @@ fs.readdir(contractsDir, (err, files) => {
   console.log('HTML:', html);
 
   // Set outputs for other GitHub Actions steps
-  console.log(`::set-output name=lineCounts::${JSON.stringify(results)}`);
-  console.log(`::set-output name=html::${html}`);
+  core.setOutput('lineCounts', JSON.stringify(results));
+  core.setOutput('html', html);
 });
