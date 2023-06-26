@@ -1,16 +1,10 @@
 # action.yml
 name: 'Custom Code Analyzer'
-description: 'Greet someone and record the time'
-inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
-    required: true
-    default: 'World'
+description: 'Counts the number of lines in each file in the contracts directory.'
+inputs: {}
 outputs:
-  time: # id of output
-    description: 'The time we greeted you'
+  lineCounts:
+    description: 'The number of lines in each file in the contracts directory.'
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  args:
-    - ${{ inputs.who-to-greet }}
