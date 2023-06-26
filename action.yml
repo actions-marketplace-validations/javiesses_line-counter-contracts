@@ -1,5 +1,5 @@
 # action.yml
-name: 'Custom Code Analyzer'
+name: 'Contracts Line Counter'
 description: 'Counts the number of lines in each file in the contracts directory.'
 inputs: {}
 outputs:

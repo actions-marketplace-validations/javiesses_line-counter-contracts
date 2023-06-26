@@ -1,21 +1,22 @@
-# Hello world docker action
+# Contracts Line Counter
 
-This action prints "Hello World" or "Hello" + the name of a person to greet to the log.
+This action has been created as an exercise to learn how to create custom Github Actions to be published in the Github Marketplace.
 
-## Inputs
+It simply counts the lines of the files under the `/contracts` folder.
 
-## `who-to-greet`
+# Usage
 
-**Required** The name of the person to greet. Default `"World"`.
+```
+ - name: Run Custom Action
+  uses: javiesses/contracts-line-counter@v1
+  id: custom
+```
 
-## Outputs
+# Output
 
-## `time`
+It exposes two fields in the output object:
 
-The time we greeted you.
+`lineCounts`: an array of objects containing `{ filename: lineCount }`. Can be accessed as `${{ steps.custom.outputs.lineCounts }}`
 
-## Example usage
+`html`: an HTML table that can be used as a report containg the amount of lines per file. Can be accessed as `${{ steps.custom.outputs.html }}`
 
-uses: actions/hello-world-docker-action@v2
-with:
-  who-to-greet: 'Mona the Octocat'
