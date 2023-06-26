@@ -1,5 +1,5 @@
 # action.yml
-name: 'Custom Github Action'
+name: 'Custom Code Analyzer'
 description: 'Greet someone and record the time'
 inputs:
   who-to-greet:  # id of input
