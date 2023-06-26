@@ -5,6 +5,8 @@ inputs: {}
 outputs:
   lineCounts:
     description: 'The number of lines in each file in the contracts directory.'
+  html:
+    description: 'The HTML output of the code analyzer.'
 runs:
   using: 'node16'
   main: 'index.js'
