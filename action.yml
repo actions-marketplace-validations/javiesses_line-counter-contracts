@@ -6,5 +6,5 @@ outputs:
   lineCounts:
     description: 'The number of lines in each file in the contracts directory.'
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
+  using: 'node16'
+  main: 'index.js'
